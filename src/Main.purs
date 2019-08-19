@@ -3,7 +3,6 @@ module Main where
 import Prelude
 import Effect (Effect)
 import Effect.Console (log)
+import Effect.Unsafe (unsafePerformEffect)
 
-main :: Effect Unit
-main = do
-  log "Hello sailor!"
+main = unsafePerformEffect $ log "Hello sailor!"
